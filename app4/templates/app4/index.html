@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Square of Each Number</title>
+    
+</head>
+<body>
+    <h2>Enter Number</h2>
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">Submit </button>
+    </form>
+    
+{% if output%}
+<h3> Square of the Numbers:</h3>
+      {% for item in output%}
+      {{item}}
+      {% endfor %}
+
+{% endif%}
+</body>
+</html>

@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .Forms1{
+            align-items:center;
+            text-align:center;
+            
+        }
+        #btn{
+            background-color: aqua;
+            border-radius: 20px;
+            font-family: 'Courier New', Courier, monospace;
+            text-transform: uppercase;
+            
+        }
+         #btn:hover{
+            background-color: rgb(126, 255, 255);
+            border-radius: 25px;
+            font-family:'Times New Roman', Times, serif
+           
+            
+            
+        }
+        p{
+            font-size: 1.5rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-transform: uppercase;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="Forms1">
+    <p>Welcome to Loan Amount Calculator</p>
+     <form method="POST">
+      {% csrf_token %}
+      {{form.as_p}}
+      <button id="btn" type="submit">FIND LOAN Details</button>
+    <p>Simple Intrest:  ₹ {{param1}}</p>
+    </form>
+</class>
+    
+</body>
+</html>
