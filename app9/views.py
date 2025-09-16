@@ -21,6 +21,6 @@ def home(request):
 
             combined = zip(num, sqr, cubes)
     else:
-        form1 = toolkit()  # empty form for GET requests
+        form1 = toolkit() 
 
     return render(request, 'app9/index.html', {'form': form1, 'data': combined})
