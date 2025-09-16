@@ -11,8 +11,8 @@
         {{form.as_p}}
         <button type="submit">Calculate</button>
     </form>
-    {%for item1,item2,item3 in param1%}
-    <p> NUMBER: {{item1}} <br>SQUARE : {{item2}}, CUBES : {{item3}} </p>
+    {%for item1,item2,item3 in data%}
+    <p> NUMBER: {{item1}} <br>SQUARE : {{item2}} <br>CUBE : {{item3}} </p>
 
     {% endfor %}
     <br>
