@@ -3,22 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BANK</title>
+    <title> TOOLKIT </title>
 </head>
 <body>
-
     <form method="POST">
         {% csrf_token %}
         {{form.as_p}}
         <button type="submit">Calculate</button>
     </form>
+    {%for item1,item2,item3 in param1%}
+    <p> NUMBER: {{item1}} <br>SQUARE : {{item2}}, CUBES : {{item3}} </p>
 
-<p>Dear {{name}},</p>
-<p>You will receive an amount of Rs {{param2}} on {{param4}} for a deposit of Rs {{param3}} </p> 
-
-<p>Total Interest is {{param1}}</p>
-<p>We are always at your service.</p>
-<p>With Regards,</p>
-<p> SBI </p>
+    {% endfor %}
+    <br>
+    
 </body>
 </html>
